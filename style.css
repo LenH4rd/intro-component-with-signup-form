@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --p-red: hsl(0, 100%, 74%);
+    --p-green: hsl(154, 59%, 51%);
+
+    --a-blue: hsl(248, 32%, 49%);
+
+    --n-darkBlue: hsl(249, 10%, 26%);
+    --n-grayishBlue: hsl(246, 25%, 77%);
+
+    --fs-body: 16px;
+
+    --ff-default: 'Poppins', sans-serif;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semiBold: 600;
+    --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: var(--ff-default);
+    font-size: var(--fs-body);
+    background-color: var(--p-red);
+    background-image: url(images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+main {
+    width: 328px;
+    
+}
+
+.description h2 {
+    margin: 90px 40px 18px 40px;
+    font-weight: var(--fw-bold);
+    font-size: 27px;
+}
+
+.description p {
+    margin-bottom: 66px;
+}
+
+#free-trial {
+    border: none;
+    margin-bottom: 24px;
+    height: 88px;
+    background-color: var(--a-blue);
+    font-size: 16px;
+    padding: 0 60px;
+    color: var(--n-grayishBlue);
+    font-family: var(--ff-default);
+    font-weight: var(--fw-medium);
+    box-shadow: 0px 8px hsla(2, 66%, 62%, 70%);
+    border-radius: 10px;
+    width: 328px;
+}
+
+#free {
+    color: white;
+    font-weight: var(--fw-semiBold);
+    color: white;
+}
+
+form {
+    background-color: white;
+    padding: 24px 24px 0 24px;
+    box-shadow: 0px 8px hsla(358, 62%, 63%, 90%);
+}
+
+label {
+    display: block;
+}
+
+input {
+    padding-left: 16px;
+    font-family: var(--ff-default);
+    font-weight: var(--fw-bold);
+    box-shadow: none;
+    border: 2px solid hsl(0, 0%, 88%);
+}
+
+input, 
+#claim {
+    width: 279px;
+    height: 56px;
+}
+
+#first-name, 
+#last-name, #email, 
+#password {
+    margin-bottom: 16px;
+}
+
+#claim {
+    border: none;
+    background-color: var(--p-green);
+    text-transform: uppercase;
+    font-size: var(--fs-body);
+    color: white;
+    font-weight: var(--fw-semiBold);
+    font-family: var(--ff-default);
+    box-shadow: inset 0 -8px hsl(155, 41%, 48%);
+}
+
+form, 
+input, 
+#first-name, 
+#last-name, 
+#email, 
+#password, 
+#claim {
+    border-radius: 6px;
+}
+
+.sign-up p {
+    color: var(--n-grayishBlue);
+    font-size: 10px;
+    padding: 10px 30px 30px 30px;
+}
+
+#terms-and-services {
+    color: var(--p-red);
+    font-weight: var(--fw-bold);
+}
+
+#free-trial, #claim:hover {
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+
+    body {
+        min-height: 100vh;
+        background-image: url(images/bg-intro-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        width: 1080px;
+    }
+
+    .description h2{
+        font-size: 42px;
+        font-weight: var(--fw-bold);
+        text-align: left;
+        margin: 180px 0 40px 0;
+    }
+
+    .description p {
+        text-align: left;
+    }
+
+    #free-trial {
+        height: 60px;
+    }
+    #free-trial, form {
+        width: 540px;
+    }
+
+    form {
+        padding : 40px 40px 0 40px;
+        height: 474px;
+    }
+    input {
+        margin-bottom: 40px;
+        padding-left: 30px;
+    }
+    input, #claim {
+        width: 460px;
+    }
+
+}
